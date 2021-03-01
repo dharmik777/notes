@@ -31,13 +31,13 @@ module.exports = function(app) {
   app.delete("/api/notes/", (req, res) => {
 
 
-    fs.readFile("../data/db.json", "utf8", (err, data) => {
+    fs.readFile("../db/db.json", "utf8", (err, data) => {
       if (err) throw err;
 
       const allNotes = JSON.parse(data);
       
 
-      fs.writeFile("../data/db.json", JSON.stringify(newAllNotes, null, 2), err => {
+      fs.writeFile("../db/db.json", JSON.stringify(newAllNotes, null, 2), err => {
         if (err) throw err;
         res.send(db);
         console.log("deleted")
