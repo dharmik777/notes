@@ -1,15 +1,20 @@
 {
-  "name": "note-taker",
+  "name": "notes",
   "version": "1.0.0",
-  "description": "",
+  "description": "# Unit 11 Express Homework: Note Taker",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dharmik777/notes.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4",
-    "inquirer": "^7.3.3"
-  }
+  "bugs": {
+    "url": "https://github.com/dharmik777/notes/issues"
+  },
+  "homepage": "https://github.com/dharmik777/notes#readme"
 }
