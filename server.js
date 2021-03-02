@@ -1,19 +1,19 @@
-const express = require ("express");
-const path = require ("path");
-const fs = require("fs");
-
-
-const PORT = 8080;
-
+const express = require("express");
+const htmlRoutes = require("./routes/html-routes.js");
+const apiRoutes = require("./routes/api-routes.js");
+const PORT = process.env.PORT || 3000;
 const app = express();
+
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static("public"));
+app.use(apiRoutes);
+app.use(htmlRoutes);
 
-require("./routes/apiroutes.js")(app);
-require("./routes/htmlroutes.js")(app);
 
-app.listen(PORT, function (){
-    console.log("its working!")
-});
+
+app.listen(PORT, function () {
+    console.log("http://localhost:"  + PORT);
+  });
